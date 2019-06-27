@@ -1,0 +1,41 @@
+# 面向对象的特征
+封装, 继承 , 多态
+
+# final , finally , finalize的区别
+1. final 真的是不可改变, 他可以修饰,方法, 变量 类, 如果类被final修饰,则表示这个类不能再被继承 ,,如果final是基本类型则他的值是不可以改变的, 但如何修饰的引用类型, 则只可以修改, 但是不可以修改引用地址
+2. finally 表示的他时try catch中 最后执行finally, 也就是程序无论怎么运行,最后都会走到finally里面, 一般用于释放资源和解锁
+3.finalize 他在java的object中所定义,什么时候会调用?在Gc释放的时候都会调用finalize, 表示GC在回收的时候,finalize再次判断是否需要回收, 是否有挽留的机会
+
+# int 和integer的区别
+1 integer 是对象类型
+对象类型必须满足的特征: 1 实例化之后才可以使用,栈中存储对象名称,数据存放在堆中, 栈指向堆
+
+2 int 是基本类型
+基本类型的特征, 不需要实例化 , 默认值为0
+
+# int和integer比较
+== 为false的原因是因为比较的是引用 , equal比较的是值是否相等
+
+Integer integer = new Integer(34);
+Integer integer1 = new Integer(34);
+System.out.println(integer.equals(integer1));
+System.out.println(integer == integer1); 
+
+true
+false
+为什么使用== 的时候会为true
+integer类型会自动的拆箱转换为int类型,所有他们两个相等 ??
+
+int a = 9;
+Integer integer = new Integer(9);
+System.out.println(a == integer); true
+System.out.println(integer == a);  true
+System.out.println(integer.equals(a)); true
+最后一个为false的原因是以为integer的值超过了128 , integer内部有一个缓冲区,如果是在128范围之内则正确
+
+int a = 890;
+int b = 890;
+System.out.println(a == b);  true
+Integer integer = 134;
+Integer integer1 = 134;
+System.out.println(integer.equals(integer1));true
