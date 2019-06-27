@@ -21,7 +21,7 @@
 </thead>
 <tbody>
 <tr>
-<td align="center"><a href="">java基础</a></td>
+<td align="center"><a href="https://github.com/JudyWang88/Java-Interview/issues/1">java基础</a></td>
 <td align="center"><a href="">容器</a></td>
 <td align="center"><a href="">JVM</a></td>
 <td align="center"><a href="">多线程</a></td>
