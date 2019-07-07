@@ -1,10 +1,10 @@
-# JDK和JRE有什么区别 #
+#1. JDK和JRE有什么区别 #
 JDK 的全屏是 Java Development Kit 软件开发工具包,提供了Java的开发环境和运行环境   JRE全屏为Java RunTime Environment. Java运行环境
 如果只是想运行程序那么只安装JRE就可以, 如果想开发,编写程序那么需要安装JDK
 JDK包含了JRE
 
 
-# ==与equal的区别 #
+#2. ==与equal的区别 #
 
 考察点分为两个
 1 基本类型比较:比较的是值相等, 引用类型比较:比较的是引用地址相等
@@ -13,7 +13,7 @@ JDK包含了JRE
 说明
 对于string 和 integer 等比较equal的时候发现比较的是值类型,那是因为他们重写了equal方法,所以最终比较的是值相等
 
-# 两个对象的Hashcode相等, 则equals也一定为true吗 #
+#3. 两个对象的Hashcode相等, 则equals也一定为true吗 #
 
 考察点
 
@@ -39,7 +39,7 @@ JDK包含了JRE
         System. out. println(str1. equals(str2)); //false
 
 
-# final在Java中的作用 #       
+#4. final在Java中的作用 #       
 
  考察点:
  1 final可以作用在什么地方? 1类, 方法,修饰符 
@@ -49,7 +49,7 @@ JDK包含了JRE
 
 
 
-# Java中的Math.round(-1.5) #
+#5. Java中的Math.round(-1.5) #
 
 考察点:
   Math.round()的作用是四舍五入,如果是负数,则取接近最大值的那个数
@@ -57,14 +57,14 @@ JDK包含了JRE
  `  System.out.println(Math.round(-1.5)); //1`
 
 
-# String属于基本类型吗 #
+#6. String属于基本类型吗 #
 
 考察点:
    基本类型都有哪些? byte:1  char:1 short:2 int:4 floot:4 long:8 double:8 boolean:1
 
 不属于,String 属于引用类型,他是对象
 
-# java中操作字符串有哪些类,他们之间有什么区别 #
+#7. java中操作字符串有哪些类,他们之间有什么区别 #
 
  考察点:
   字符串:String
@@ -84,7 +84,7 @@ JDK包含了JRE
     }`
  C. StringBuffer效率没有StringBuilder高
 
-# String str="i" 与String str = new String("i") #
+#8. String str="i" 与String str = new String("i") #
 
   考察点
   数据存放在JVM什么地方
@@ -110,7 +110,7 @@ JDK包含了JRE
         System.out.println(s5 == s6); //false
        `
 
-# 如何将字符串反转 #
+#9. 如何将字符串反转 #
 
  考察点
  StringBuffer和StringBuilder有反转的方法,但是String没有该方法
@@ -120,7 +120,7 @@ JDK包含了JRE
         System.out.println(stringBuffer); //87654321
         `
 
-# String常用方法有哪些 #
+#10. String常用方法有哪些 #
   
  考察点
    基本代码书写
@@ -138,6 +138,17 @@ JDK包含了JRE
     }
 
     `
+#11. final, finally, finalize 的区别 #
+  考察点:
+  1.什么是final
+  2.什么是finally
+  3.什么是finalize
+
+  final用于声明属性方法类,不可以变,不可以重写或继承
+  finally用于try catch中方法最终执行的代码块
+  finalize是object的方法,在垃圾回收的时候会执行次方法,判断这个对象是否被存活的对象访问到.如果没有则清除
+
+
 
 # 抽象类必须要有抽象方法吗 #
  考察点
